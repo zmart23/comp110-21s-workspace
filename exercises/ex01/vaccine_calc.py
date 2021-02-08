@@ -23,19 +23,17 @@ doses_administered: int = int(input("Doses Administered: "))
 
 doses_per_day: int = int(input("Doses Per Day: "))
 
-target_percent_vaccinated: int = int(input("Target Percent Vaccinated: "))
+target_percent: int = int(input("Target Percent Vaccinated: "))
 
 one_day: timedelta = timedelta(1)
 
-days_to_percent_vaccinated: int = int(2 * population * target_percent_vaccinated / doses_per_day)
-
-target_vaccination_length: timedelta = timedelta(days_to_percent_vaccinated)
+days_to_percent_vacc: int = int(2 * population * target_percent / 100 / doses_per_day) 
+target_vaccination_length: timedelta = timedelta(days_to_percent_vacc)
 
 
 today: datetime = datetime.today()
 future: datetime = today + target_vaccination_length
 
-target_vaccination_date: datetime = future.strftime("%B %d, %Y")
+target_vacc_date: datetime = future.strftime("%B %d, %Y")
 
-print("We will reach " + str(target_percent_vaccinated) + "% vaccination in " + str(days_to_percent_vaccinated) + " days, which falls on " + str(target_vaccination_date) + ".")
-
+print("We will reach "+str(target_percent)+"% vaccination in "+str(days_to_percent_vacc)+" days, which falls on "+str(target_vacc_date)+".")

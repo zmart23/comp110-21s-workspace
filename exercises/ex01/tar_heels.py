@@ -6,10 +6,15 @@ __author__ = "730317621"
 college:int = int(input("Enter an int: "))
 
 
+output = ""
+
 if college % 2 == 0:
-    print("TAR")
+    output = output + "TAR"
+if college % 14 == 0: 
+    output = output + " "
+if college % 7 == 0:
+    output = output + "HEELS"
+if college % 7 == 0 or college % 2 == 0: 
+    print(output)
 else:
-    if college % 7 == 0:
-        print("HEELS")
-    else:
-        print("TAR HEELS")# Begin your solution here...
+    print("CAROLINA")
