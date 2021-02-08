@@ -3,7 +3,7 @@
 __author__ = "730317621"
 
 
-college:int = int(input("Enter an int: "))
+college: int = int(input("Enter an int: "))
 
 
 output = ""

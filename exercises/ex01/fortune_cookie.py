@@ -13,7 +13,7 @@ from random import randint
 
 print("Your fortune cookie says...")
 
-fortune:int = int(randint(1,100))
+fortune: int = int(randint(1, 100))
 
 
 if fortune < 60:
