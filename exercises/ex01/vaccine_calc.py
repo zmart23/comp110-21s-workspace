@@ -27,7 +27,7 @@ targ_per: int = int(input("Target Percent Vaccinated: "))
 
 one_day: timedelta = timedelta(1)
 
-days_per_vac: int = int((pop) * 2 * ((targ_per / 100) - (doses_admin / 2 / pop)) / doses_per_day)  
+days_per_vac: int = round(pop * 2 * ((targ_per / 100) - (doses_admin / 2 / pop)) / doses_per_day)
 target_vaccination_length: timedelta = timedelta(days_per_vac)
 
 
