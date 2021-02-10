@@ -11,6 +11,7 @@ def main() -> None:
     print(fortune_cookie())
     print("Now, go spread positive vibes!")
 
+
 def fortune_cookie() -> str:
     """Definition of the fortune_cookie function."""
     a: int = int(randint(1, 100))
