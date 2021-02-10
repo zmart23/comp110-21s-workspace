@@ -11,9 +11,7 @@ def main() -> None:
 
 def tar_heels(tarithmetic: int) -> str:
     """Function that checks divisibility of various numbers by 2 and 7."""
-
     output = ""
-
     if tarithmetic % 2 == 0:
         output = output + "TAR"
     if tarithmetic % 14 == 0: 

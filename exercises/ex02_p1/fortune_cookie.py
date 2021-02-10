@@ -11,9 +11,6 @@ def main() -> None:
     print(fortune_cookie())
     print("Now, go spread positive vibes!")
 
-from random import randint
-
-
 def fortune_cookie() -> str:
     """Definition of the fortune_cookie function."""
     a: int = int(randint(1, 100))
@@ -26,9 +23,6 @@ def fortune_cookie() -> str:
             return "Everything you do today will prosper."
         return "You will find love in the near future."
 
-
-
-# Python Idiom for "starting" the program when run as a module.
-# The special dunder variable __name__ will be "__main__" when run as module. 
+ 
 if __name__ == "__main__":
     main()
