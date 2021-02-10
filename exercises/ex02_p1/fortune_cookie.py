@@ -13,8 +13,10 @@ def main() -> None:
 
 from random import randint
 
-def fortune_cookie(a: int = int(randint(1, 100))) -> str:
+
+def fortune_cookie() -> str:
     """Definition of the fortune_cookie function."""
+    a: int = int(randint(1, 100))
     if a < 60:
         if a < 30:
             return "You will be gifted with a large sum of money."
