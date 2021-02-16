@@ -11,16 +11,10 @@ def main() -> None:
     doses: int = int(input("Doses administered: "))
     doses_per_day: int = int(input("Doses per day: "))
     target: int = int(input("Target percent vaccinated: "))
-    days_to_target(population, doses, doses_per_day, target)
-    howmanydays: int = int()
-    days_per_vac: int = round(population * 2 * ((target / 100) - (doses / 2 / population)) / doses_per_day)
-    today: datetime = datetime.today()
-    target_vaccination_length: timedelta = timedelta(howmanydays)
-    future: datetime = today + target_vaccination_length
-    time: datetime = future.strftime("%B %d, %Y")
-    future_date(howmanydays)
-    leng: int = int(days_per_vac)
-    dat: datetime = int(time)
+    daytota = days_to_target(population, doses, doses_per_day, target)
+    fudat = future_date(daytota)
+    leng: int = int(daytota)
+    dat: int = int(fudat)
     print("We will reach " + str(target) + "% vaccination in " + str(leng) + " days, which falls on " + str(dat) + ".")
 
 
@@ -36,7 +30,8 @@ def future_date(howmanydays: int) -> str:
     target_vaccination_length: timedelta = timedelta(howmanydays)
     future: datetime = today + target_vaccination_length
     time: datetime = future.strftime("%B %d, %Y")
-    return str(time)
+    fut_time: int = datetime(time)
+    return fut_time
 
 
 if __name__ == "__main__":
