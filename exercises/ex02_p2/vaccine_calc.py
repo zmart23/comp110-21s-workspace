@@ -30,7 +30,7 @@ def future_date(howmanydays: int) -> str:
     target_vaccination_length: timedelta = timedelta(howmanydays)
     future: datetime = today + target_vaccination_length
     time: datetime = future.strftime("%B %d, %Y")
-    fut_time: int = datetime(time)
+    fut_time: str = int(time)
     return fut_time
 
 
