@@ -4,23 +4,24 @@ __author__ = "730317621"
 
 from random import randint
 
+
 def main() -> None:
     """The entrypoint of the module, when run as a program."""
     greet()
     points: int = int(adventure_points)
     print("Menu: ")
-    print("Which Star Wars Vehicle Are You?")
-    print("Which Star Wars Character Are You?")
-    print("Finish Experience")
-    print()
+    print ("Which Star Wars Vehicle Are You?")
+    print ("Which Star Wars Character Are You?")
+    print ("Finish Experience")
+    print ()
     response: str = str(input("Which game would you like to play?"))
     a: str = str("Which Star Wars Vehicle Are You?")
     b: str = str("Which Star Wars Character Are You?")
     while True:
         if response == a:
-            sw_vehicle_quiz(points: int)
+            sw_vehicle_quiz (points: int)
         if response == b:
-            sw_character_quiz(points)
+            sw_character_quiz (points)
         else:
             print(f"You have {points} adventure points.")
     
@@ -87,10 +88,6 @@ def sw_character_quiz (points):
 
 def end_message () -> None:
     "Prints goodbye message with total accumulated adventure points."
-    
-
-
-
 
 
 if __name__ == "__main__":
