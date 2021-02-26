@@ -34,7 +34,6 @@ def greet() -> None:
 
 def sw_vehicle_quiz(points: int) -> int:
     """Quiz that takes various inputs to decide what Star Wars vehicle you pilot."""
-    global points
     main()
     print(f"Well, {player}, this game is called 'What Star Wars Vehicle Do You Pilot?.' You will be asked a series of questions that may seem unrelated but these questions will indeed help me to determine what Star Wars vehicle you would pilot. For each time you complete the quiz, you will earn 50 adventure points.")
     material: str = str(input("Would you like a ship made of wood or metal?"))
@@ -80,7 +79,6 @@ def sw_vehicle_quiz(points: int) -> int:
 
 def sw_planet_quiz(points: int) -> int:
     "Quiz that takes various inputs to decide which Star Wars planet you live on."
-    global points
     main()
     print(f"Well, {player}, this game is called 'Which Star Wars Planet Do You Live On?.' You will be asked a series of questions that may seem unrelated but these questions will indeed help me to determine what Star Wars planet you live on. For each time you complete the quiz, you will earn 50 adventure points.")
     terrain: str = str(input("What kind of terrain does your planet have: desert or forest?"))
@@ -111,7 +109,6 @@ def sw_character_quiz() -> None:
 
 def end_message () -> None:
     "Prints goodbye message with total accumulated adventure points."
-    global points
     print(f"Goodbye, you have {points} adventure points.")
 
 
