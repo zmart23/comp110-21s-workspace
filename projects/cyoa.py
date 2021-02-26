@@ -26,7 +26,7 @@ def main() -> None:
             sw_character_quiz()
         if response == c:
             sw_planet_quiz(points)
-        if response == d
+        if response == d:
             end_message()
     print()
         
