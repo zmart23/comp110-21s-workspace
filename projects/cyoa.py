@@ -80,7 +80,7 @@ def sw_vehicle_quiz(points: int) -> int:
         print ()
    
 
-def sw_planet_quiz(points: int -> int:)
+def sw_planet_quiz(points: int -> int:
     "Quiz that takes various inputs to decide which Star Wars planet you live on."
     global points
     main()
