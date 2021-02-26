@@ -19,7 +19,7 @@ def main() -> None:
     b: str = str("Which Star Wars Character Are You?")
     c: str = str("Which Star Wars Planet Do You Live On?")
     d: str = str("Finish Experience.")
-    while True
+    while True:
         if response == a:
             sw_vehicle_quiz(points)
         if response == b:
