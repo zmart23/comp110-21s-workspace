@@ -102,7 +102,7 @@ def sw_planet_quiz(points: int) -> int:
         if weather == sunny:
             print("You live on Coruscant.")
 
-def sw_character quiz() -> None:
+def sw_character_quiz() -> None:
     "Quiz that takes various inputs to decide which Star Wars character you are."
     global points
     print(f"Well, {player}, this game is called 'Which Star Wars Character Are You?.'You will be asked a series of questions that may seem unrelated but these questions will indeed help me to determine what Star Wars character you are. For each time you complete the quiz, you will earn 50 adventure points.")
