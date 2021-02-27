@@ -26,7 +26,7 @@ def main() -> None:
             print(f"You have {points} points.")
         else:
             if response == b:
-                points = sw_lightsaber_quiz()
+                points = sw_lightsaber_quiz(light_points)
                 print(f"You have {points} points.")
             else:
                 if response == c:
@@ -43,9 +43,9 @@ def greet() -> None:
     player = input("What is your name? ")
     print()
     print(f"Hello, {player}, welcome to Star Wars Mania. In this game, there will be two quiz options "
-        "available which will ask you various questions and determine something in Star Wars that relates "
-        "to you. For each game played, you will receive various amounts of adventure points. Different "
-        "prizes will be rewarded for different point totals.")
+           "available which will ask you various questions and determine something in Star Wars that relates "
+           "to you. For each game played, you will receive various amounts of adventure points. Different "
+           "prizes will be rewarded for different point totals.")
 
 
 def sw_vehicle_quiz(veh_game_points: int) -> int:
