@@ -8,7 +8,7 @@ def main() -> None:
     points = 0
     response = ""
     greet()
-    while response !=  "Finish Experience.":
+    while response != "Finish Experience.":
         print()
         print("Choose A Game: ")
         print("Which Star Wars Vehicle Are You?")
@@ -43,17 +43,17 @@ def greet() -> None:
     player = input("What is your name? ")
     print()
     print(f"Hello, {player}, welcome to Star Wars Mania. In this game, there will be two quiz options "
-    "available which will ask you various questions and determine something in Star Wars that relates "
-    "to you. For each game played, you will receive various amounts of adventure points. Different "
-    "prizes will be rewarded for different point totals.")
+        "available which will ask you various questions and determine something in Star Wars that relates "
+        "to you. For each game played, you will receive various amounts of adventure points. Different "
+        "prizes will be rewarded for different point totals.")
 
 
 def sw_vehicle_quiz(veh_game_points: int) -> int:
     """Quiz that takes various inputs to decide what Star Wars vehicle you pilot."""
     print(f"Well, {player}, this game is called 'What Star Wars Vehicle Do You Pilot?.' You will be "
-    "asked a series of questions that may seem unrelated but these questions will indeed help me to "
-    "determine what Star Wars vehicle you would pilot. For each time you complete the quiz, you will "
-    "earn an amount of adventure points based on your answer.")
+        "asked a series of questions that may seem unrelated but these questions will indeed help me to "
+        "determine what Star Wars vehicle you would pilot. For each time you complete the quiz, you will "
+        "earn an amount of adventure points based on your answer.")
     material: str = str(input(f"{player}, would you like a ship made of wood or metal? "))
     seats: int = int(input(f"{player}, would you like 2 seats or 4 seats? "))
     speed: str = str(input(f"{player}, would you like a fast vehicle or a slow one? "))
@@ -93,9 +93,9 @@ def sw_vehicle_quiz(veh_game_points: int) -> int:
 def sw_planet_quiz(plan_game_points: int) -> int:
     """Quiz that takes various inputs to decide which Star Wars planet you live on."""
     print(f"Well, {player}, this game is called 'Which Star Wars Planet Do You Live On?.' You will be asked "
-    "a series of questions that may seem unrelated but these questions will indeed help me to determine what "
-    "Star Wars planet you live on. For each time you complete the quiz, you will earn an amount of adventure "
-    "points based on your answer.")
+        "a series of questions that may seem unrelated but these questions will indeed help me to determine what "
+        "Star Wars planet you live on. For each time you complete the quiz, you will earn an amount of adventure "
+        "points based on your answer.")
     terrain: str = str(input(f"{player}, what kind of terrain does your planet have: desert or forest? "))
     weather: str = str(input(f"{player}, what kind of weather is frequent on your planet: rainy or sunny? "))
     if terrain == "desert":
@@ -120,9 +120,9 @@ def sw_lightsaber_quiz(light_points: int) -> None:
     global points
     points = light_points
     print(f"Well, {player}, this game is called 'What is the Color of Your Lightsaber?.'You "
-    "will be asked a series of questions that may seem unrelated but these questions will indeed" 
-    "help me to determine what color your lightsaber is. For each time you complete the quiz, you "
-    "will earn an amount of adventure points based on your answer.")
+        "will be asked a series of questions that may seem unrelated but these questions will indeed" 
+        "help me to determine what color your lightsaber is. For each time you complete the quiz, you "
+        "will earn an amount of adventure points based on your answer.")
     eyes: str = str(input(f"{player}, what color are your eyes: blue, green, or brown?"))
     ugly: str = str(input(f"{player}, which color is uglier to you: green or purple?"))
     if eyes == "blue":
