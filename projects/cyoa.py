@@ -42,9 +42,10 @@ def greet() -> None:
     global player
     player = input("What is your name? ")
     print()
-    print(f"Hello, {player}, welcome to Star Wars Mania. In this game, there will be two quiz options available " 
-    "which will ask you various questions and determine something in Star Wars that relates to you. For each game " 
-    "played, you will receive various amounts of adventure points. Different prizes will be rewarded for different point totals.")
+    print(f"Hello, {player}, welcome to Star Wars Mania. In this game, there will be two quiz options "
+    "available which will ask you various questions and determine something in Star Wars that relates "
+    "to you. For each game played, you will receive various amounts of adventure points. Different "
+    "prizes will be rewarded for different point totals.")
 
 
 def sw_vehicle_quiz(veh_game_points: int) -> int:
@@ -91,8 +92,6 @@ def sw_vehicle_quiz(veh_game_points: int) -> int:
 
 def sw_planet_quiz(plan_game_points: int) -> int:
     """Quiz that takes various inputs to decide which Star Wars planet you live on."""
-    #main()
-    #greet()
     print(f"Well, {player}, this game is called 'Which Star Wars Planet Do You Live On?.' You will be asked "
     "a series of questions that may seem unrelated but these questions will indeed help me to determine what "
     "Star Wars planet you live on. For each time you complete the quiz, you will earn an amount of adventure "
@@ -118,8 +117,6 @@ def sw_planet_quiz(plan_game_points: int) -> int:
 
 def sw_lightsaber_quiz(light_points: int) -> None:
     """Quiz that takes various inputs to decide what lightsaber color you have."""
-    #main()
-    #greet()
     global points
     points = light_points
     print(f"Well, {player}, this game is called 'What is the Color of Your Lightsaber?.'You "
