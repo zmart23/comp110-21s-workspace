@@ -126,8 +126,6 @@ def sw_lightsaber_quiz(light_points: int) -> None:
           "will be asked a series of questions that may seem unrelated but these questions will indeed" 
           "help me to determine what color your lightsaber is. For each time you complete the quiz, you "
           "will earn an amount of adventure points based on your answer.")
-    eyes: str = str(input(f"{player}, what color are your eyes: blue, green, or brown?"))
-    ugly: str = str(input(f"{player}, which color is uglier to you: green or purple?"))
     
         
 
