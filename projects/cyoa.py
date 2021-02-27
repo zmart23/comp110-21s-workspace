@@ -44,16 +44,16 @@ def greet() -> None:
     print()
     print(f"Hello, {player}, welcome to Star Wars Mania. In this game, there will be two quiz options "
           "available which will ask you various questions and determine something in Star Wars that relates "
-           "to you. For each game played, you will receive various amounts of adventure points. Different "
-           "prizes will be rewarded for different point totals.")
+          "to you. For each game played, you will receive various amounts of adventure points. Different "
+          "prizes will be rewarded for different point totals.")
 
 
 def sw_vehicle_quiz(veh_game_points: int) -> int:
     """Quiz that takes various inputs to decide what Star Wars vehicle you pilot."""
     print(f"Well, {player}, this game is called 'What Star Wars Vehicle Do You Pilot?.' You will be "
           "asked a series of questions that may seem unrelated but these questions will indeed help me to "
-           "determine what Star Wars vehicle you would pilot. For each time you complete the quiz, you will "
-           "earn an amount of adventure points based on your answer.")
+          "determine what Star Wars vehicle you would pilot. For each time you complete the quiz, you will "
+          "earn an amount of adventure points based on your answer.")
     material: str = str(input(f"{player}, would you like a ship made of wood or metal? "))
     seats: int = int(input(f"{player}, would you like 2 seats or 4 seats? "))
     speed: str = str(input(f"{player}, would you like a fast vehicle or a slow one? "))
@@ -94,8 +94,8 @@ def sw_planet_quiz(plan_game_points: int) -> int:
     """Quiz that takes various inputs to decide which Star Wars planet you live on."""
     print(f"Well, {player}, this game is called 'Which Star Wars Planet Do You Live On?.' You will be asked "
           "a series of questions that may seem unrelated but these questions will indeed help me to determine what "
-           "Star Wars planet you live on. For each time you complete the quiz, you will earn an amount of adventure "
-           "points based on your answer.")
+          "Star Wars planet you live on. For each time you complete the quiz, you will earn an amount of adventure "
+          "points based on your answer.")
     terrain: str = str(input(f"{player}, what kind of terrain does your planet have: desert or forest? "))
     weather: str = str(input(f"{player}, what kind of weather is frequent on your planet: rainy or sunny? "))
     if terrain == "desert":
