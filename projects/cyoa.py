@@ -127,7 +127,6 @@ def sw_lightsaber_quiz(light_points: int) -> None:
           "help me to determine what color your lightsaber is. For each time you complete the quiz, you "
           "will earn an amount of adventure points based on your answer.")
     
-        
 
 def end_message(end_points: int) -> None:
     """Prints goodbye message with total accumulated adventure points."""
