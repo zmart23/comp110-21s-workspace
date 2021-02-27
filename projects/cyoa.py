@@ -2,11 +2,13 @@
 
 __author__ = "730317621"
 
+points: int = 0
+player: str = ""
+
 
 def main() -> None:
     """The entrypoint of the module, when run as a program."""
     points: int = 0
-    player: str = ""
     response = ""
     greet()
     while response != "Finish Experience.":
