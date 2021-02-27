@@ -5,7 +5,8 @@ __author__ = "730317621"
 
 def main() -> None:
     """The entrypoint of the module, when run as a program."""
-    points = 0
+    points: int = 0
+    player: str = ""
     response = ""
     greet()
     while response != "Finish Experience.":
@@ -125,29 +126,8 @@ def sw_lightsaber_quiz(light_points: int) -> None:
           "will earn an amount of adventure points based on your answer.")
     eyes: str = str(input(f"{player}, what color are your eyes: blue, green, or brown?"))
     ugly: str = str(input(f"{player}, which color is uglier to you: green or purple?"))
-    if eyes == "blue":
-        if ugly == "green":
-            print("Your lightsaber color is blue.")
-            light_points += 1
-        elif ugly == "purple":
-            print("Your lightsaber color is red.")
-            light_points += 2
-    if eyes == "green":
-        if ugly == "green":
-            print("Your lightsaber color is purple.")
-            light_points += 3
-        elif ugly == "purple":
-            print("Your lightsaber color is orange.")
-            light_points += 4
-    if eyes == "brown":
-        if ugly == "green":
-            print("Your lightsaber color is yellow.")
-            light_points += 5
-        elif ugly == "purple":
-            print("Your lightsaber color is green.")
-            light_points += 6
-    sw_lightsaber_quiz(light_points)
-
+    
+        
 
 def end_message(end_points: int) -> None:
     """Prints goodbye message with total accumulated adventure points."""
