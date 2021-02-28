@@ -68,32 +68,32 @@ def sw_vehicle_quiz(veh_game_points: int) -> int:
     if material == "wood":
         if seats == 2:
             if speed == "slow":
-                print(f"You pilot a speeder bike.")
+                print("You pilot a speeder bike.")
                 veh_game_points += 1
             elif speed == "fast":
-                print(f"You pilot a snowspeeder.")
+                print("You pilot a snowspeeder.")
                 veh_game_points += 2
         elif seats == 4: 
             if speed == "slow":
-                print(f"You pilot the Death Star.")
+                print("You pilot the Death Star.")
                 veh_game_points += 3
             elif speed == "fast":
-                print(f"You pilot an X-wing Starfighter.")
+                print("You pilot an X-wing Starfighter.")
                 veh_game_points += 4
     if material == "metal":
         if seats == 2:
             if speed == "slow":
-                print(f"You pilot the Millennium Falcon.")
+                print("You pilot the Millennium Falcon.")
                 veh_game_points += 5
             elif speed == "fast":
-                print(f"You pilot a medical frigate.")
+                print("You pilot a medical frigate.")
                 veh_game_points += 6
         elif seats == 4:
             if speed == "fast":
-                print(f"You pilot a sandcrawler.")
+                print("You pilot a sandcrawler.")
                 veh_game_points += 7
             elif speed == "slow":
-                print(f"You pilot a star destroyer.")
+                print("You pilot a star destroyer.")
                 veh_game_points += 8
     return veh_game_points
 
