@@ -21,7 +21,7 @@ def main() -> None:
         print()
         response: str = str(input("Which game would you like to play? "))
         a: str = str("Which Star Wars Vehicle Are You?")
-        b: str = str("Whiat is the Color of Your Lightsaber?")
+        b: str = str("What is the Color of Your Lightsaber?")
         c: str = str("Which Star Wars Planet Do You Live On?")
         d: str = str("Finish Experience.")
         if response == a:
@@ -29,7 +29,7 @@ def main() -> None:
             print(f"You have {points} points.")
         else:
             if response == b:
-                points = sw_lightsaber_quiz(points)
+                points = sw_lightsaber_quiz()
                 print(f"You have {points} points.")
             else:
                 if response == c:
@@ -117,15 +117,28 @@ def sw_planet_quiz(plan_game_points: int) -> int:
             plan_game_points += 4
     return plan_game_points
 
-
-def sw_lightsaber_quiz(light_points: int) -> None:
-    """Quiz that takes various inputs to decide what lightsaber color you have."""
+def bonus_points() -> None:
     global points
-    points = light_points
-    print(f"Well, {player}, this game is called 'What is the Color of Your Lightsaber?.'You "
-          "will be asked a series of questions that may seem unrelated but these questions will indeed" 
-          "help me to determine what color your lightsaber is. For each time you complete the quiz, you "
-          "will earn an amount of adventure points based on your answer.")
+    points += 1
+
+
+def sw_lightsaber_quiz() -> None:
+    """Quiz that takes various inputs to decide how many bonus round points you can obtain."""
+    bonus_points()
+    print(f"Welcome, {player}, to the Bonus Round! In this game, you will earn bonus adventure "
+          "points for each of the following questions you answer.")
+    donkey: str = input("How many legs does a donkey have? ")
+    spider: str = input("How many legs does a spider have? ")
+    time: str = input("What digit time is noon(without the ':')? ")
+    if donkey == 4:
+        points += 1
+    if spider == 8:
+        points += 2
+    if time == 12:
+        points += 5
+    print()
+
+
     
 
 def end_message(end_points: int) -> None:
