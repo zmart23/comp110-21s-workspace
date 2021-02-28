@@ -29,7 +29,7 @@ def main() -> None:
             print(f"You have {points} points.")
         else:
             if response == b:
-                points = sw_lightsaber_quiz()
+                sw_lightsaber_quiz()
                 print(f"You have {points} points.")
             else:
                 if response == c:
@@ -118,7 +118,7 @@ def sw_planet_quiz(plan_game_points: int) -> int:
     return plan_game_points
 
 def bonus_points() -> None:
-    "Procedure Reassigning Points Variable"
+    """Procedure Reassigning Points Variable."""
     global points
     points += 1
 
@@ -128,9 +128,9 @@ def sw_lightsaber_quiz() -> None:
     bonus_points()
     print(f"Welcome, {player}, to the Bonus Round! In this game, you will earn bonus adventure "
           "points for each of the following questions you answer.")
-    donkey: int = input("How many legs does a donkey have? ")
-    spider: int = input("How many legs does a spider have? ")
-    time: int = input("What digit time is noon(without the ':')? ")
+    donkey: int = str(input("How many legs does a donkey have? "))
+    spider: int = str(input("How many legs does a spider have? "))
+    time: int = str(input("What digit time is noon(without the ':')? "))
     if donkey == 4:
         points += 1
     if spider == 8:
@@ -140,7 +140,6 @@ def sw_lightsaber_quiz() -> None:
     print()
 
 
-    
 def end_message(end_points: int) -> None:
     """Prints goodbye message with total accumulated adventure points."""
     print(f"Goodbye, you have {end_points} adventure points.")
