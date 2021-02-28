@@ -117,6 +117,7 @@ def sw_planet_quiz(plan_game_points: int) -> int:
             plan_game_points += 4
     return plan_game_points
 
+
 def bonus_points() -> None:
     """Procedure Reassigning Points Variable."""
     global points
@@ -128,9 +129,9 @@ def sw_lightsaber_quiz() -> None:
     bonus_points()
     print(f"Welcome, {player}, to the Bonus Round! In this game, you will earn bonus adventure "
           "points for each of the following questions you answer.")
-    donkey: int = str(input("How many legs does a donkey have? "))
-    spider: int = str(input("How many legs does a spider have? "))
-    time: int = str(input("What digit time is noon(without the ':')? "))
+    donkey = str(input("How many legs does a donkey have? "))
+    spider = str(input("How many legs does a spider have? "))
+    time = str(input("What digit time is noon(without the ':')? "))
     if donkey == 4:
         points += 1
     if spider == 8:
