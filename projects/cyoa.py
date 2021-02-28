@@ -1,5 +1,4 @@
-"""
-Choose Your Own Adventure Project 00.
+"""Choose Your Own Adventure Project 00.
 
 I made a loop to bring the user back to a decision between 3 game pathways 
 and an exit path. Additionally, I looped the points accrued from answering each 
