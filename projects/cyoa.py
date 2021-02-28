@@ -3,8 +3,8 @@
 I made a loop to bring the user back to a decision between 3 game pathways 
 and an exit path. Additionally, I looped the points accrued from answering each 
 question so that it added to the points global variable after each answer. I also 
-made a global named constant that allowed me to use an emoji in my message in my 
-exit path waving goodbye to the player(s) of my game.
+made an additional function in addition to the required ones as an additional game 
+in my project. This additional game is the Star Wars planet quiz.
 """
 
 __author__ = "730317621"
