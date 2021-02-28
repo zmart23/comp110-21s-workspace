@@ -2,8 +2,13 @@
 
 __author__ = "730317621"
 
+
+from random import randint
+
+
 points: int = 0
 player: str = ""
+WAVING_EMOJI: str = "\U0001F44B"
 
 
 def main() -> None:
@@ -15,13 +20,13 @@ def main() -> None:
         print()
         print("Choose A Game: ")
         print("Which Star Wars Vehicle Are You?")
-        print("What is the Color of Your Lightsaber?")
+        print("Bonus Points Game.")
         print("Which Star Wars Planet Do You Live On?")
         print("Finish Experience.")
         print()
         response: str = str(input("Which game would you like to play? "))
         a: str = str("Which Star Wars Vehicle Are You?")
-        b: str = str("What is the Color of Your Lightsaber?")
+        b: str = str("Bonus Points Game.")
         c: str = str("Which Star Wars Planet Do You Live On?")
         d: str = str("Finish Experience.")
         if response == a:
@@ -29,7 +34,7 @@ def main() -> None:
             print(f"You have {points} points.")
         else:
             if response == b:
-                sw_lightsaber_quiz()
+                bonus_points_quiz()
                 print(f"You have {points} points.")
             else:
                 if response == c:
@@ -63,32 +68,32 @@ def sw_vehicle_quiz(veh_game_points: int) -> int:
     if material == "wood":
         if seats == 2:
             if speed == "slow":
-                print("You pilot a speeder bike.")
+                print(f"You pilot a speeder bike.")
                 veh_game_points += 1
             elif speed == "fast":
-                print("You pilot a snowspeeder.")
+                print(f"You pilot a snowspeeder.")
                 veh_game_points += 2
         elif seats == 4: 
             if speed == "slow":
-                print("You pilot the Death Star.")
+                print(f"You pilot the Death Star.")
                 veh_game_points += 3
             elif speed == "fast":
-                print("You pilot an X-wing Starfighter")
+                print(f"You pilot an X-wing Starfighter.")
                 veh_game_points += 4
     if material == "metal":
         if seats == 2:
             if speed == "slow":
-                print("You pilot the Millennium Falcon.")
+                print(f"You pilot the Millennium Falcon.")
                 veh_game_points += 5
             elif speed == "fast":
-                print("You pilot a medical frigate.")
+                print(f"You pilot a medical frigate.")
                 veh_game_points += 6
         elif seats == 4:
             if speed == "fast":
-                print("You pilot a sandcrawler.")
+                print(f"You pilot a sandcrawler.")
                 veh_game_points += 7
             elif speed == "slow":
-                print("You pilot a star destroyer.")
+                print(f"You pilot a star destroyer.")
                 veh_game_points += 8
     return veh_game_points
 
@@ -121,10 +126,10 @@ def sw_planet_quiz(plan_game_points: int) -> int:
 def bonus_points() -> None:
     """Procedure Reassigning Points Variable."""
     global points
-    points += 1
+    points = randint(1, 100)
 
 
-def sw_lightsaber_quiz() -> None:
+def bonus_points_quiz() -> None:
     """Quiz that takes various inputs to decide how many bonus round points you can obtain."""
     bonus_points()
     print(f"Welcome, {player}, to the Bonus Round! In this game, you will earn bonus adventure "
@@ -133,17 +138,17 @@ def sw_lightsaber_quiz() -> None:
     spider = int(input("How many legs does a spider have? "))
     time = int(input("What digit time is noon(without the ':')? "))
     if donkey == 4:
-        points += 1
+        points
     if spider == 8:
-        points += 2
+        points
     if time == 12:
-        points += 5
+        points
     print()
 
 
 def end_message(end_points: int) -> None:
     """Prints goodbye message with total accumulated adventure points."""
-    print(f"Goodbye, you have {end_points} adventure points.")
+    print(f"Goodbye, you have {end_points} adventure points {WAVING_EMOJI}.")
 
 
 if __name__ == "__main__":
