@@ -17,11 +17,9 @@ def palindromify(word: str, factual: bool) -> str:
     mirror: int = int(len(word) / 2)
     while i <= len(word) - 1:
         if len(word) % 2 == 0:
-            return 
-                i += 1
+            return i
         else:
-            return
-                i += 1
+            return i
         return True
 
 if __name__ == "__main__":
