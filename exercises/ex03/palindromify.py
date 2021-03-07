@@ -18,10 +18,10 @@ def palindromify(word: str, factual: bool) -> str:
     i: int = 0
     while i <= len(word) - 1:
         if len(word) % 2 == 0:
-            return i
+            return word
         else:
-            return i
-        return True
+            return word
+        return word
 
 
 if __name__ == "__main__":
