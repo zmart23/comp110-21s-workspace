@@ -10,6 +10,7 @@ def main() -> None:
 
 
 def avoid_fifth(stay_away: str) -> str:
+    """Returns string that avoids fifth letter of alphabet."""
     fifth: str = ""
     i: int = 0
     while i <= len(stay_away) - 1:

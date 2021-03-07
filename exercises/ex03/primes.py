@@ -12,6 +12,7 @@ def main() -> None:
 
 
 def is_prime(number: int) -> bool:
+    """Returns if a number is prime."""
     character: int = number
     if character > 1:
         for i in range(2, (character // 2) + 1):
@@ -23,6 +24,7 @@ def is_prime(number: int) -> bool:
 
 
 def list_primes(numero: int, numera: int) -> list[int]:
+    """Returns list of integers that are prime."""
     primes = []
     lower_bound: int = numero
     upper_bound: int = numera

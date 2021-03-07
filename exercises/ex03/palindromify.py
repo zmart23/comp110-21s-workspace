@@ -12,15 +12,17 @@ def main() -> None:
     print(palindromify("red", True))
     print(palindromify("live on time ", False))
 
+
 def palindromify(word: str, factual: bool) -> str:
+    """Returns a palindrome of string input and boolean."""
     i: int = 0
-    mirror: int = int(len(word) / 2)
     while i <= len(word) - 1:
         if len(word) % 2 == 0:
             return i
         else:
             return i
         return True
+
 
 if __name__ == "__main__":
     main()
