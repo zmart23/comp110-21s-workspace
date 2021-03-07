@@ -8,6 +8,7 @@ def main() -> None:
     print(is_prime(7))
     print(is_prime(4))
     print(list_primes(2,100))
+    print(list_primes(5,75))
 
 
 def is_prime(number: int) -> bool:
@@ -16,24 +17,19 @@ def is_prime(number: int) -> bool:
         for i in range(2, (character // 2) + 1):
             if character % i == 0:
                 return False
-            else:
-                return True
+        return True
     else:
         return False
 
 
 def list_primes(numero: int, numera: int) -> list[int]:
-    i = []
+    primes = []
     lower_bound: int = numero
     upper_bound: int = numera
     for i in range(lower_bound, upper_bound):
-        if i > 1:
-            for idx in range(2, i):
-                if i % idx == 0:
-                    i += 1
-            else:
-                return i
-                
+        if is_prime(i):
+            primes.append(i)
+    return primes
 
 
 if __name__ == "__main__":
