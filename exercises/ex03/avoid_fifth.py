@@ -8,6 +8,7 @@ def main() -> None:
     print(avoid_fifth("welcome friend"))
     print(avoid_fifth("have a great day mEn and womEn"))
 
+
 def avoid_fifth(stay_away: str) -> str:
     fifth: str = ""
     i: int = 0

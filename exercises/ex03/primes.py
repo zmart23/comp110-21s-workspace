@@ -27,9 +27,13 @@ def list_primes(numero: int, numera: int) -> list[int]:
     lower_bound: int = numero
     upper_bound: int = numera
     for i in range(lower_bound, upper_bound):
-        if is_prime(i):
-            return list[numero, numera]
-        i += 1
+        if i > 1:
+            for idx in range(2, i):
+                if i % idx == 0:
+                    i += 1
+            else:
+                return i
+                
 
 
 if __name__ == "__main__":

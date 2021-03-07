@@ -14,7 +14,7 @@ def main() -> None:
 
 def palindromify(word: str, factual: bool) -> str:
     i: int = 0
-    mirror: int = int(len(word)/2)
+    mirror: int = int(len(word) / 2)
     while i <= len(word) - 1:
         if len(word) % 2 == 0:
             return 
