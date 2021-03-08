@@ -17,7 +17,7 @@ def palindromify(word: str, factual: bool) -> str:
     """Returns a palindrome of string input and boolean."""
     new_string: str = ""
     length = len(word)
-    if factual == True:
+    if factual is True:
         while length > 0:
             new_string += word[length - 1]
             length -= 1
