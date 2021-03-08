@@ -20,7 +20,7 @@ def palindromify(word: str, factual: bool) -> str:
     if factual == True:
         while length > 0:
             new_string += word[length - 1]
-            length -=  1
+            length -= 1
             new_string = word[length] + new_string
     else:
         while length > 0:
