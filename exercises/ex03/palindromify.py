@@ -15,13 +15,24 @@ def main() -> None:
 
 def palindromify(word: str, factual: bool) -> str:
     """Returns a palindrome of string input and boolean."""
-    i: int = 0
-    while i <= len(word) - 1:
-        if len(word) % 2 == 0:
-            return word
-        else:
-            return word
-        return word
+    new_string: str = ""
+    length = len(word)
+    if factual == True:
+        while length > 0:
+            new_string += word[length - 1]
+            length -=  1
+            new_string = word[length] + new_string
+    else:
+        while length > 0:
+            if length >= len(word):
+                new_string = ""
+                length -= 1
+                new_string = word[length] + new_string
+            else:
+                new_string += word[length - 1]
+                length -= 1
+                new_string = word[length] + new_string
+    return new_string
 
 
 if __name__ == "__main__":
