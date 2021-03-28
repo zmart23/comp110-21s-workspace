@@ -6,15 +6,15 @@ __author__ = "730317621"
 from csv import DictReader
 
 
-# def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
-#     """Read a CSV file's contents into a list of rows."""
-#     rows: list[dict[str, str]] = []
-#     file_handle = open(csv_file, "r", encoding="utf8")
-#     csv_reader = DictReader(file_handle)
-#     for row in csv_reader:
-#         rows.append(row)
-#     file_handle.close()
-#     return rows
+def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
+    """Read a CSV file's contents into a list of rows."""
+    rows: list[dict[str, str]] = []
+    file_handle = open(csv_file, "r", encoding="utf8")
+    csv_reader = DictReader(file_handle)
+    for row in csv_reader:
+        rows.append(row)
+    file_handle.close()
+    return rows
 
 
 def column_values(row: list[dict[str, str]], column: str) -> list[str]:
@@ -34,6 +34,7 @@ def columnar(rowed: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 def head(rowing: dict[str, list[str]], columning: int) -> dict[str, list[str]]:
+    """Produce a new column-based table."""
     rowing_columning: dict[str, list[str]] = {}
     for column in rowing:
         first_values: list[str] = []
@@ -48,3 +49,8 @@ def select(ro: dict[str, list[str]], col: list[str]) -> dict[str, list[str]]:
     for column in col:
         ro_col[column] = ro[column]
     return ro_col
+
+
+def count(row: list[str]) -> dict[str, int]:
+    dict_four: dict[str, int] = {}
+    return dict_four
