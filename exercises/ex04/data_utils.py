@@ -36,8 +36,7 @@ def columnar(rowed: list[dict[str, str]]) -> dict[str, list[str]]:
 def head(rowing: dict[str, list[str]], columning: int) -> dict[str, list[str]]:
     rowing_columning: dict[str, list[str]] = {}
     for column in rowing:
-        first_values: list[int] = []
-        i = 0
+        first_values: list[str] = []
         for i in range(columning):
             first_values.append(rowing[column][i])
         rowing_columning[column] = first_values
