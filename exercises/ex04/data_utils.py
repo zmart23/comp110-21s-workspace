@@ -34,7 +34,7 @@ def columnar(rowed: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 def head(rowing: dict[str, list[str]], columning: int) -> dict[str, list[str]]:
-    """Produce a new column-based table."""
+    """Produce a new column-based table with only the first rows of data for each column."""
     rowing_columning: dict[str, list[str]] = {}
     for column in rowing:
         first_values: list[str] = []
@@ -45,6 +45,7 @@ def head(rowing: dict[str, list[str]], columning: int) -> dict[str, list[str]]:
 
 
 def select(ro: dict[str, list[str]], col: list[str]) -> dict[str, list[str]]:
+    """Produce a new column-based table with only a specific subset of the original columns."""
     ro_col: dict[str, list[str]] = {}
     for column in col:
         ro_col[column] = ro[column]
@@ -52,5 +53,6 @@ def select(ro: dict[str, list[str]], col: list[str]) -> dict[str, list[str]]:
 
 
 def count(row: list[str]) -> dict[str, int]:
+    """Given a list, this function will produce a dict that gives number times value appears."""
     dict_four: dict[str, int] = {}
     return dict_four
