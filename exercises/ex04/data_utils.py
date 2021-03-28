@@ -3,7 +3,7 @@
 __author__ = "730317621"
 
 
-from  csv import DictReader
+from csv import DictReader
 
 
 def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
@@ -46,7 +46,6 @@ def head(rowing: dict[str, list[str]], columning: int) -> dict[str, list[str]]:
 
 def select(ro: dict[str, list[str]], col: list[str]) -> dict[str, list[str]]:
     ro_col: dict[str, list[str]] = {}
-
-
-def count(val_freq: list[str]) -> dict[str, int]
-    freq: dict[str, int] = {}
+    for column in col:
+        ro_col[column] = ro[column]
+    return ro_col
