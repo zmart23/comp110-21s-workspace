@@ -9,7 +9,7 @@ from csv import DictReader
 def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
     """Read a CSV file's contents into a list of rows."""
     rows: list[dict[str, str]] = []
-    file_handle = open(csv_file, "r")
+    file_handle = open(csv_file, "r", encoding="utf8")
     csv_reader = DictReader(file_handle)
     for row in csv_reader:
         rows.append(row)
