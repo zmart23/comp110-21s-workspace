@@ -56,8 +56,7 @@ def count(row: list[str]) -> dict[str, int]:
     """Given a list, this function will produce a dict that gives number times value appears."""
     counting: dict[str, int] = {}
     for i in row:
-        for i in counting:
-            i += 1
-        else:
-            i = 1
+        if i not in counting:
+            counting[i] = 0
+        counting[i] += 1
     return counting
